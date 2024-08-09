@@ -1,0 +1,234 @@
+/* mine
+    things learned
+        - height: fit-content; as your content grows height grows as well.
+        - max-width: 100% prevents horizontal scrolling(as your
+        website shrinks like in mobile your image auto adjusts
+        the width)
+*/
+
+/* LINKING THE FONT */
+/* @import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap'); */
+
+/* NEW! LINKING THE FONT(offline) */
+@font-face {
+    font-family: outfit;
+    src: url(/assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: youngserif;
+    src: url(/assets/fonts/young-serif/YoungSerif-Regular.ttf);
+}
+
+/* variables */
+/* :root {
+    --heading-font: "Young Serif", serif;
+    --content-font: "Outfit", sans-serif;
+    --para-font-size: 16px;
+    --content-font-color: rgba(95, 87, 78, 1);
+    --preparation-color: rgba(123, 40, 79, 1);
+    --h2-color: rgba(133, 70, 50, 1);
+} */
+
+
+/*  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: outfit;
+    /* background-color: rgba(243, 230, 216, 1); */
+}
+
+/* prevents horizontal scrolling */
+img {
+    max-width: 100%;
+}
+
+body {
+    background-color: hsl(30, 54%, 90%);
+}
+
+
+/* desktop design: meaning when container crosses the max-width
+of 700px apply these settings*/
+.container {
+    max-width: 900px;
+    margin-inline: auto;
+    background-color: white;
+}
+
+
+/* didn't apply */
+/* descendant selector: give paddding to every div except the first div 
+that contains the img */
+/* .container div:not(:first-child) {
+    padding: 1.5rem;
+} */
+
+
+/* padding to banner */
+.banner {
+    padding-top: 1.5rem;
+    padding-right: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+
+/* spacing between the para and h1 */
+.banner h1 {
+    margin-bottom: 1rem;
+}
+
+.banner article {
+    background-color: hsl(330, 100%, 98%);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    margin-top: 2rem;
+}
+
+.banner article h3 {
+    color: hsl(332, 51%, 32%);
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+
+/* spacing/padding to the ingredients div */
+.ingredients {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+
+/* setting the font + color of h1 & h2 */
+h1,
+h2 {
+    font-family: youngserif;
+    font-weight: 400;
+    color: hsl(14, 45%, 36%);
+    letter-spacing: 0.05rem;
+    font-size: 2rem;
+}
+
+h1 {
+    color: hsl(24, 5%, 18%);
+    font-size: 48px;
+}
+
+/* setting the font size */
+p, li{
+    font-size: 1.2rem;
+}
+
+
+/* to push the all li items inside the page */
+ul,
+ol {
+    padding-left: 30px;
+}
+
+/* line-height to give breathing room between the lines insdie
+p tag as well as all li items */
+p,
+li {
+    line-height: 1.4;
+    color: hsl(30, 10%, 34%);
+}
+
+/* to give extra breathing room between all li items */
+li {
+    margin-top: 0.5rem;
+    padding-left: 1REM; /* add space between the disc and text */
+}
+
+/* to change colour of disc of ul & ol */
+li::marker {
+    color: hsl(14, 45%, 36%); /* Change this to your desired color */
+}
+
+
+/* giving the border as well as margin + padding */
+.instructions {
+    border-top: 1px solid hsl(30, 18%, 87%);
+    border-bottom: 1px solid hsl(30, 18%, 87%);
+    margin: 1.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.instructions h2 {
+    padding-bottom: 0.5rem;
+}
+
+
+/* giving space/margin to the four edges of nutrition div */
+.nutrition {
+    margin: 1.5rem;
+}
+
+.nutrition p {
+    margin-top: 1rem;
+    margin-bottom: 1.2rem;
+}
+
+/* border bottom between li items inside nutrition div */
+.nutrition ul li {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid hsl(30, 18%, 87%);
+    padding-bottom: 0.5rem;
+
+}
+
+/* removing border for the last li inside nutrition */
+.nutrition ul li:last-child {
+    border-bottom: none;
+}
+
+/* customizing the nutrients factors and their values */
+.nutrients{
+    color: hsl(30, 10%, 34%);
+    padding-left: 1rem;
+    flex-basis: 50%;
+    text-align: left;
+    padding-right: 20px;
+}
+
+.values {
+    color: hsl(14, 45%, 36%);
+    font-weight: bold;
+    flex-basis: 50%;
+    text-align: left;
+}
+
+
+/* attribution part */
+.attribution {
+    font-size: 13px;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+}
+
+.attribution a {
+    /* color: hsl(228, 45%, 44%); */
+    color: black;
+}
+
+
+/* desktop design */
+@media (min-width: 768px) {
+    .container {
+        margin: 5rem auto 0; /* meaning padding on top, auto on both left right and 0 on bottom */
+        padding: 2rem;
+        border: none;
+        border-radius: 1rem;
+    }
+
+    img {
+        border-radius: 1rem;
+    }
+}
